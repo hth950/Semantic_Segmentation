@@ -73,9 +73,18 @@ class CustomDataset(Dataset):
             Defaults to ``dict(backend='disk')``.
     """
 
-    CLASSES = None
-
-    PALETTE = None
+    CLASSES = ('background','vehicle', 'bus', 'truck', 'policeCar', 'ambulance', 'schoolBus', 'otherCar', 
+        'motorcycle', 'bicycle', 'twoWheeler', 'pedestrian', 'rider', 'freespace',
+        'curb', 'sidewalk', 'crossWalk', 'safetyZone', 'speedBump', 'roadMark', 'whiteLane',
+        'yellowLane', 'blueLane', 'redLane', 'stopLane', 'constructionGuide', 'trafficDrum',
+        'rubberCone', 'trafficSign', 'trafficLight', 'warningTriangle', 'fence')
+    PALETTE = [ 
+        [0, 0, 0], [128, 0, 0], [0, 128, 0], [0, 0, 128], [128, 128, 0],  [128, 0, 128], [0, 128, 128], [128, 128, 128], 
+        [64, 0, 0], [0, 64, 0], [0, 0, 64], [64, 64, 0],  [64, 0, 64], [0, 64, 64], [64, 64, 64], 
+        [192, 0, 0], [0, 192, 0], [0, 0, 192], [192, 192, 0],  [192, 0, 192], [0, 192, 192], [192, 192, 192], 
+        [64, 128, 0], [192, 128, 0], [64, 0, 128], [192, 0, 128], [64, 128, 128], 
+        [192, 128, 128], [128, 64, 0], [0, 192, 128], [128, 192, 0], [0, 64, 128]
+        ]
 
     def __init__(self,
                  pipeline,

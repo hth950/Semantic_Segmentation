@@ -125,6 +125,12 @@ def stare_classes():
     """stare class names for external use."""
     return ['background', 'vessel']
 
+def custom_classes():
+    return ['background', 'vehicle', 'bus', 'truck', 'policeCar', 'ambulance', 'schoolBus', 'otherCar', 
+        'motorcycle', 'bicycle', 'twoWheeler', 'pedestrian', 'rider', 'freespace',
+        'curb', 'sidewalk', 'crossWalk', 'safetyZone', 'speedBump', 'roadMark', 'whiteLane',
+        'yellowLane', 'blueLane', 'redLane', 'stopLane', 'constructionGuide', 'trafficDrum',
+        'rubberCone', 'trafficSign', 'trafficLight', 'warningTriangle', 'fence']
 
 def cityscapes_palette():
     """Cityscapes palette for external use."""
@@ -264,6 +270,13 @@ def stare_palette():
     """STARE palette for external use."""
     return [[120, 120, 120], [6, 230, 230]]
 
+def custom_palette():
+    return [ [0,0,0],[128, 0, 0], [0, 128, 0], [0, 0, 128], [128, 128, 0],  [128, 0, 128], [0, 128, 128], [128, 128, 128], 
+        [64, 0, 0], [0, 64, 0], [0, 0, 64], [64, 64, 0],  [64, 0, 64], [0, 64, 64], [64, 64, 64], 
+        [192, 0, 0], [0, 192, 0], [0, 0, 192], [192, 192, 0],  [192, 0, 192], [0, 192, 192], [192, 192, 192], 
+        [64, 128, 0], [192, 128, 0], [64, 0, 128], [192, 0, 128], [64, 128, 128], 
+        [192, 128, 128], [128, 64, 0], [0, 192, 128], [128, 192, 0], [0, 64, 128]]
+
 
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
@@ -278,7 +291,8 @@ dataset_aliases = {
         'coco_stuff164k'
     ],
     'isaid': ['isaid', 'iSAID'],
-    'stare': ['stare', 'STARE']
+    'stare': ['stare', 'STARE'],
+    'custom' : ['custom']
 }
 
 
